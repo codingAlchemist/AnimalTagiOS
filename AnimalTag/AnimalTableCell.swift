@@ -9,12 +9,18 @@
 import UIKit
 
 class AnimalTableCell: UITableViewCell {
+    
     var commonNameLabel = UILabel()
     var scientificNameLabel = UILabel()
     var animalImage = UIImageView()
+    var shortDescLabel = UILabel()
+    
+    var nameStackView = UIStackView()
     
     let textFrame = CGRect(x: 0, y: 0, width: 200, height: 20)
-    let imageFragme = CGRect(x: 0, y: 0, width: 50, height: 50)
+    let imageFragme = CGRect(x: 0, y: 0, width: 20, height: 20)
+    let shortTextFrame = CGRect(x: 0, y: 0, width: 200, height: 50)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         prepareCell()
@@ -32,7 +38,9 @@ class AnimalTableCell: UITableViewCell {
     func setAnimal(_ animal: Animal) -> Void {
         self.commonNameLabel.text = "Common Name: \(animal.commonName)"
         self.scientificNameLabel.text = "Scientific Name: \(animal.scientificName)"
-        let url = URL(string:Constants.baseUrl.appending(animal.image1) )
+        self.shortDescLabel.text = animal.shortDesc;
+        let urlString = "\(Constants.baseUrl)app/public/\(animal.image1)"
+        let url = URL(string:urlString)
         do{
             let data = try Data(contentsOf: url!)
             self.animalImage.image = UIImage(data: data)
@@ -44,48 +52,73 @@ class AnimalTableCell: UITableViewCell {
     }
     
     func prepareCell() -> Void {
+        self.nameStackView.backgroundColor = UIColor.red
+        self.nameStackView.alignment = .leading
+        self.nameStackView.axis = .vertical
+        self.nameStackView.spacing = 0;
+    
         self.commonNameLabel.frame = textFrame
+        self.commonNameLabel.font = UIFont.systemFont(ofSize: 12)
+        
         self.scientificNameLabel.frame = textFrame
+        self.scientificNameLabel.font = UIFont.systemFont(ofSize: 12)
+        
         self.animalImage.frame = imageFragme
+        
+        self.shortDescLabel.frame = shortTextFrame
+        self.shortDescLabel.font = UIFont.systemFont(ofSize: 12)
+        
         self.commonNameLabel.textAlignment = .left
         self.scientificNameLabel.textAlignment = .left
+        self.shortDescLabel.textAlignment = .left
+        
         self.animalImage.backgroundColor = UIColor.blue
         
-        self.contentView.addSubview(self.commonNameLabel)
-        self.contentView.addSubview(self.scientificNameLabel)
+        self.nameStackView.addArrangedSubview(self.commonNameLabel)
+        self.nameStackView.addArrangedSubview(self.scientificNameLabel)
+        
+
+        self.contentView.addSubview(self.nameStackView)
         self.contentView.addSubview(self.animalImage)
+        self.contentView.addSubview(self.shortDescLabel)
         prepareContraints()
         
     }
     
     func prepareContraints() -> Void {
+        
         self.commonNameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.scientificNameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.animalImage.translatesAutoresizingMaskIntoConstraints = false
+        self.shortDescLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.nameStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        let children = ["image":self.animalImage,
-                        "common":self.commonNameLabel,
-                        "latin":self.scientificNameLabel] as [String : Any]
-        
-        
-        VisualConstraintHelper.makeConstraintWith(self.contentView,
-                                                  children: children as! Dictionary<String, UIView>,
-                                                  constraint: "H:|-10-[image(50)]-10-|")
-        
+        self.commonNameLabel.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        self.commonNameLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        self.scientificNameLabel.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        self.scientificNameLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         VisualConstraintHelper.makeConstraintWith(self.contentView,
-                                                  children:children as! Dictionary<String, UIView>,
-                                                  constraint: "V:|-10-[image(50)]-20-[common(20)]-[latin(20)]|")
+                                                  children: ["image":self.animalImage, "labels":self.nameStackView],
+                                                  constraint: "H:|-[image(50)]-[labels]-|")
         
         VisualConstraintHelper.makeConstraintWith(self.contentView,
-                                                  children:children as! Dictionary<String, UIView>,
-                                                  constraint: "H:|-10-[common]|")
+                                                  children: ["image":self.animalImage],
+                                                  constraint: "V:|-[image(50)]-|")
         
         VisualConstraintHelper.makeConstraintWith(self.contentView,
-                                                  children:children as! Dictionary<String, UIView>,
-                                                  constraint: "H:|-10-[latin]|")
+                                                  children: ["labels":self.nameStackView],
+                                                  constraint: "V:|-[labels]-50-|")
+        
+        VisualConstraintHelper.makeConstraintWith(self.contentView,
+                                                  children: ["short":self.shortDescLabel,
+                                                             "labels":self.nameStackView],
+                                                  constraint: "V:|-[labels]-[short]|")
+        
+        VisualConstraintHelper.makeConstraintWith(self.contentView,
+                                                  children: ["short":self.shortDescLabel],
+                                                  constraint: "H:|-[short]-|")
 
-        
+
     }
 }

@@ -13,7 +13,7 @@ public class Constants: NSObject {
     //public static let fa_list = Character(UnicodeScalar(UInt32(hexString:"f039")!))
     public static let fa_list = "\u{f082}"
     public static let localUrl = "http://localhost:8080/"
-    public static let baseUrl = "www.jason-debottis.com/"
+    public static let baseUrl = "http://jason-debottis.com/"
     
     
 }

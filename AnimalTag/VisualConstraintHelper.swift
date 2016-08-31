@@ -14,6 +14,9 @@ public class VisualConstraintHelper: NSObject {
         for view in children.values{
             view.translatesAutoresizingMaskIntoConstraints = false
         }
-        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: constraint, options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: children))
+        parent.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: constraint,
+                                                             options: NSLayoutFormatOptions(rawValue: 0),
+                                                             metrics: nil,
+                                                             views: children))
     }
 }
