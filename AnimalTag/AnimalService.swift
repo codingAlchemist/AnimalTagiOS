@@ -26,6 +26,7 @@ public class AnimalService: NSObject, URLSessionDelegate, URLSessionTaskDelegate
             let statusCode = httpResponse.statusCode
             if statusCode == 200 {
                 print("Success")
+                
                 do{
                     let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
                     complete(json as! [AnyObject])
