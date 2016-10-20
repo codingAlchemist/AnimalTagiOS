@@ -24,7 +24,6 @@
 		9CA4240A1D4BE80600F84114 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA424071D4BE80600F84114 /* Constants.swift */; };
 		9CA4240B1D4BE80600F84114 /* VisualConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA424081D4BE80600F84114 /* VisualConstraintHelper.swift */; };
 		9CA4240D1D4BE82600F84114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA4240C1D4BE82600F84114 /* Main.storyboard */; };
-		9CDB38BF1D708ECB00517290 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB38BE1D708ECB00517290 /* AnimalDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +47,6 @@
 		9CA424081D4BE80600F84114 /* VisualConstraintHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualConstraintHelper.swift; sourceTree = "<group>"; };
 		9CA4240C1D4BE82600F84114 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9CA424101D4BE90300F84114 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		9CDB38BE1D708ECB00517290 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 			children = (
 				9CA423EB1D4BE75500F84114 /* AnimalsViewController.swift */,
 				9CA423EC1D4BE75500F84114 /* StartViewController.swift */,
-				9CDB38BE1D708ECB00517290 /* AnimalDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -224,7 +221,6 @@
 				9CA423FC1D4BE78900F84114 /* BaseTab.swift in Sources */,
 				9CA423F91D4BE78900F84114 /* AnimalTabGroup.swift in Sources */,
 				9CA423EE1D4BE75500F84114 /* StartViewController.swift in Sources */,
-				9CDB38BF1D708ECB00517290 /* AnimalDetailViewController.swift in Sources */,
 				9CA4240A1D4BE80600F84114 /* Constants.swift in Sources */,
 				9CA423D91D4BE71700F84114 /* AppDelegate.swift in Sources */,
 				9CA423ED1D4BE75500F84114 /* AnimalsViewController.swift in Sources */,
