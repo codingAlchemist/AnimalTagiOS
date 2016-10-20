@@ -9,7 +9,7 @@
 import UIKit
 
 public class AnimalService: NSObject, URLSessionDelegate, URLSessionTaskDelegate {
-    var baseUrl = "http://jason-debottis.com"
+    var baseUrl = "http://folding-shadows.com"
     let config = URLSessionConfiguration.default
     public override init() {
         super.init()
