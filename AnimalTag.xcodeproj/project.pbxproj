@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C226C37C45D529F8DF1C2A8 /* Pods_AnimalTag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436064AB3C0B740DCC1B7053 /* Pods_AnimalTag.framework */; };
 		9CA423D91D4BE71700F84114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA423D81D4BE71700F84114 /* AppDelegate.swift */; };
-		9CA423DB1D4BE71700F84114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA423DA1D4BE71700F84114 /* ViewController.swift */; };
 		9CA423E01D4BE71700F84114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA423DF1D4BE71700F84114 /* Assets.xcassets */; };
 		9CA423E31D4BE71700F84114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA423E11D4BE71700F84114 /* LaunchScreen.storyboard */; };
 		9CA423ED1D4BE75500F84114 /* AnimalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA423EB1D4BE75500F84114 /* AnimalsViewController.swift */; };
@@ -24,12 +24,16 @@
 		9CA4240A1D4BE80600F84114 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA424071D4BE80600F84114 /* Constants.swift */; };
 		9CA4240B1D4BE80600F84114 /* VisualConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA424081D4BE80600F84114 /* VisualConstraintHelper.swift */; };
 		9CA4240D1D4BE82600F84114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA4240C1D4BE82600F84114 /* Main.storyboard */; };
+		9CA92DD31DC3769000F405AE /* AnimalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA92DD21DC3769000F405AE /* AnimalInfoViewController.swift */; };
+		9CE4410E1DD10B9800ED79DE /* AnimalTag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4410C1DD10B9800ED79DE /* AnimalTag.xcdatamodeld */; };
+		9CE441121DD116B700ED79DE /* AnimalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE441111DD116B700ED79DE /* AnimalDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		115DE37E60CCDAD6E96A3F2F /* Pods-AnimalTag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalTag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimalTag/Pods-AnimalTag.debug.xcconfig"; sourceTree = "<group>"; };
+		436064AB3C0B740DCC1B7053 /* Pods_AnimalTag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalTag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA423D51D4BE71700F84114 /* AnimalTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA423D81D4BE71700F84114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9CA423DA1D4BE71700F84114 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CA423DF1D4BE71700F84114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA423E21D4BE71700F84114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CA423E41D4BE71700F84114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +51,11 @@
 		9CA424081D4BE80600F84114 /* VisualConstraintHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualConstraintHelper.swift; sourceTree = "<group>"; };
 		9CA4240C1D4BE82600F84114 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9CA424101D4BE90300F84114 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		9CA92DD21DC3769000F405AE /* AnimalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalInfoViewController.swift; sourceTree = "<group>"; };
+		9CE440E91DD0F80300ED79DE /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		9CE4410D1DD10B9800ED79DE /* AnimalTag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnimalTag.xcdatamodel; sourceTree = "<group>"; };
+		9CE441111DD116B700ED79DE /* AnimalDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalDataService.swift; sourceTree = "<group>"; };
+		E9A1071BD7F95AB67ED9C0EF /* Pods-AnimalTag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalTag.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimalTag/Pods-AnimalTag.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,17 +63,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C226C37C45D529F8DF1C2A8 /* Pods_AnimalTag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		983306599493B9B71116ADCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				115DE37E60CCDAD6E96A3F2F /* Pods-AnimalTag.debug.xcconfig */,
+				E9A1071BD7F95AB67ED9C0EF /* Pods-AnimalTag.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9CA423CC1D4BE71700F84114 = {
 			isa = PBXGroup;
 			children = (
 				9CA423D71D4BE71700F84114 /* AnimalTag */,
 				9CA423D61D4BE71700F84114 /* Products */,
+				983306599493B9B71116ADCE /* Pods */,
+				F78FA0114AE8991456A55599 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,17 +100,11 @@
 		9CA423D71D4BE71700F84114 /* AnimalTag */ = {
 			isa = PBXGroup;
 			children = (
+				9CE440EA1DD0FC2100ED79DE /* SupportingFiles */,
 				9CA424051D4BE7DD00F84114 /* Helpers */,
 				9CA424021D4BE78E00F84114 /* Models */,
 				9CA423EF1D4BE75B00F84114 /* Views */,
 				9CA423EA1D4BE72600F84114 /* Controllers */,
-				9CA423D81D4BE71700F84114 /* AppDelegate.swift */,
-				9CA4240C1D4BE82600F84114 /* Main.storyboard */,
-				9CA424101D4BE90300F84114 /* FontAwesome.ttf */,
-				9CA423DA1D4BE71700F84114 /* ViewController.swift */,
-				9CA423DF1D4BE71700F84114 /* Assets.xcassets */,
-				9CA423E11D4BE71700F84114 /* LaunchScreen.storyboard */,
-				9CA423E41D4BE71700F84114 /* Info.plist */,
 			);
 			path = AnimalTag;
 			sourceTree = "<group>";
@@ -97,6 +112,7 @@
 		9CA423EA1D4BE72600F84114 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9CA92DD21DC3769000F405AE /* AnimalInfoViewController.swift */,
 				9CA423EB1D4BE75500F84114 /* AnimalsViewController.swift */,
 				9CA423EC1D4BE75500F84114 /* StartViewController.swift */,
 			);
@@ -126,8 +142,8 @@
 		9CA424051D4BE7DD00F84114 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9CE441111DD116B700ED79DE /* AnimalDataService.swift */,
 				9CA424061D4BE80600F84114 /* AnimalService.swift */,
-				9CA424071D4BE80600F84114 /* Constants.swift */,
 				9CA424081D4BE80600F84114 /* VisualConstraintHelper.swift */,
 			);
 			name = Helpers;
@@ -142,6 +158,30 @@
 			name = FABMenu;
 			sourceTree = "<group>";
 		};
+		9CE440EA1DD0FC2100ED79DE /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9CA423D81D4BE71700F84114 /* AppDelegate.swift */,
+				9CA4240C1D4BE82600F84114 /* Main.storyboard */,
+				9CA424101D4BE90300F84114 /* FontAwesome.ttf */,
+				9CA423DF1D4BE71700F84114 /* Assets.xcassets */,
+				9CA423E11D4BE71700F84114 /* LaunchScreen.storyboard */,
+				9CA423E41D4BE71700F84114 /* Info.plist */,
+				9CE440E91DD0F80300ED79DE /* Bridging-Header.h */,
+				9CA424071D4BE80600F84114 /* Constants.swift */,
+				9CE4410C1DD10B9800ED79DE /* AnimalTag.xcdatamodeld */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F78FA0114AE8991456A55599 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				436064AB3C0B740DCC1B7053 /* Pods_AnimalTag.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CA423E71D4BE71700F84114 /* Build configuration list for PBXNativeTarget "AnimalTag" */;
 			buildPhases = (
+				60C766BD328ABA053F7764E8 /* [CP] Check Pods Manifest.lock */,
 				9CA423D11D4BE71700F84114 /* Sources */,
 				9CA423D21D4BE71700F84114 /* Frameworks */,
 				9CA423D31D4BE71700F84114 /* Resources */,
+				97BC888511A18A60BB964C2F /* [CP] Embed Pods Frameworks */,
+				C1D9FCBFFE7AADB593A10A54 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,7 +212,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "jason debottis";
 				TargetAttributes = {
 					9CA423D41D4BE71700F84114 = {
@@ -211,23 +254,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60C766BD328ABA053F7764E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97BC888511A18A60BB964C2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimalTag/Pods-AnimalTag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1D9FCBFFE7AADB593A10A54 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnimalTag/Pods-AnimalTag-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9CA423D11D4BE71700F84114 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9CA423FA1D4BE78900F84114 /* AnimalTable.swift in Sources */,
-				9CA423DB1D4BE71700F84114 /* ViewController.swift in Sources */,
 				9CA423FC1D4BE78900F84114 /* BaseTab.swift in Sources */,
 				9CA423F91D4BE78900F84114 /* AnimalTabGroup.swift in Sources */,
+				9CA92DD31DC3769000F405AE /* AnimalInfoViewController.swift in Sources */,
 				9CA423EE1D4BE75500F84114 /* StartViewController.swift in Sources */,
 				9CA4240A1D4BE80600F84114 /* Constants.swift in Sources */,
 				9CA423D91D4BE71700F84114 /* AppDelegate.swift in Sources */,
 				9CA423ED1D4BE75500F84114 /* AnimalsViewController.swift in Sources */,
 				9CA423FF1D4BE78900F84114 /* FloatingActionMenuItem.swift in Sources */,
 				9CA423FE1D4BE78900F84114 /* FloatingActionMenu.swift in Sources */,
+				9CE4410E1DD10B9800ED79DE /* AnimalTag.xcdatamodeld in Sources */,
 				9CA424041D4BE7B900F84114 /* Animal.swift in Sources */,
 				9CA424091D4BE80600F84114 /* AnimalService.swift in Sources */,
+				9CE441121DD116B700ED79DE /* AnimalDataService.swift in Sources */,
 				9CA423FB1D4BE78900F84114 /* AnimalTableCell.swift in Sources */,
 				9CA4240B1D4BE80600F84114 /* VisualConstraintHelper.swift in Sources */,
 			);
@@ -262,8 +355,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -309,8 +404,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -336,24 +433,28 @@
 		};
 		9CA423E81D4BE71700F84114 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 115DE37E60CCDAD6E96A3F2F /* Pods-AnimalTag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AnimalTag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NA.AnimalTag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AnimalTag/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		9CA423E91D4BE71700F84114 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9A1071BD7F95AB67ED9C0EF /* Pods-AnimalTag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AnimalTag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NA.AnimalTag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/AnimalTag/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -380,6 +481,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9CE4410C1DD10B9800ED79DE /* AnimalTag.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9CE4410D1DD10B9800ED79DE /* AnimalTag.xcdatamodel */,
+			);
+			currentVersion = 9CE4410D1DD10B9800ED79DE /* AnimalTag.xcdatamodel */;
+			path = AnimalTag.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9CA423CD1D4BE71700F84114 /* Project object */;
 }

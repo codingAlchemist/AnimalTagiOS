@@ -13,9 +13,8 @@ class AnimalsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        let AnimalTabs = AnimalTabGroup(frame: self.view.bounds)
+        let AnimalTabs = AnimalTabGroup(frame: self.view.bounds, controller: self)
         self.view.addSubview(AnimalTabs)
-        
         self.navigationItem.title = "Animals"
     }
     

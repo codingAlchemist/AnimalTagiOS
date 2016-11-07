@@ -37,7 +37,7 @@ class AnimalTabGroup: UIView {
     
     var overlayView = UIView()
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, controller: UIViewController) {
         
         super.init(frame: frame)
         
@@ -49,15 +49,18 @@ class AnimalTabGroup: UIView {
         
         birdTab = BaseTab(frame: tabFrame,
                           tag: tabTags.kBirdTab.rawValue,
-                          background: "birdTabBackground")
+                          background: "birdTabBackground",
+                          parentControllerIn: controller)
         
         reptileTab = BaseTab(frame: tabFrame,
                              tag: tabTags.kReptileTab.rawValue,
-                             background: "reptileTabBackground")
+                             background: "reptileTabBackground",
+                             parentControllerIn: controller)
         
         insectTab = BaseTab(frame: tabFrame,
                             tag: tabTags.kIsectTab.rawValue,
-                            background: "insectTabBackground")
+                            background: "insectTabBackground",
+                            parentControllerIn: controller)
         
         birdTab!.isBeingShown = false
         reptileTab!.isBeingShown = false
@@ -92,7 +95,7 @@ class AnimalTabGroup: UIView {
         self.addSubview(reptileTab!)
         self.addSubview(insectTab!)
 
-        self.addSubview(Folder)
+        //self.addSubview(Folder)
         
         self.addSubview(self.overlayView)
         self.addSubview(self.activityIndicator)
@@ -110,9 +113,6 @@ class AnimalTabGroup: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(frame: CGRect, controller: UIViewController) {
-        super.init(frame: frame)
-    }
     
     func getAnimals() -> Void {
         let service = AnimalService()
@@ -233,10 +233,10 @@ class AnimalTabGroup: UIView {
         
         UIView.animate(withDuration: 0.5, animations: {
             tab.center = CGPoint(x: tab.center.x - tab.frame.width, y: tab.center.y)
-        }) { (finished) in
-            tab.layer.zPosition = 3
+        }) { (finished) in        
             UIView.animate(withDuration: 0.5, animations: {
                 tab.center = CGPoint(x: tab.center.x + tab.frame.width, y: tab.center.y)
+                self.insertSubview(tab, at: 3)
             }) { (finished) in
                 self.setShown(tab)
             }
@@ -247,9 +247,9 @@ class AnimalTabGroup: UIView {
         UIView.animate(withDuration: 0.5, animations: {
             tab.center = CGPoint(x: tab.center.x - tab.frame.width, y: tab.center.y)
         }) { (finished) in
-            tab.layer.zPosition = 1
             UIView.animate(withDuration: 0.5, animations: {
                 tab.center = CGPoint(x: tab.center.x + tab.frame.width, y: tab.center.y)
+                self.insertSubview(tab, at: 1)
             }) { (finished) in
                 completion(finished)
                 self.setNotShown(tab)

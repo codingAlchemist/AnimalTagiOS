@@ -7,25 +7,29 @@
 //
 
 import UIKit
-
+protocol AnimalCellDelegate {
+    func cellTapped(animalSelected: Animal)
+}
 class AnimalTableCell: UITableViewCell {
     
     var commonNameLabel = UILabel()
     var scientificNameLabel = UILabel()
     var animalImage = UIImageView()
     var shortDescLabel = UILabel()
-    
+    var selectedAnimal:Animal? = nil
+    var delegate:AnimalCellDelegate? = nil
     var nameStackView = UIStackView()
+    
+    var tap = UITapGestureRecognizer()
     
     let textFrame = CGRect(x: 0, y: 0, width: 200, height: 20)
     let imageFragme = CGRect(x: 0, y: 0, width: 20, height: 20)
     let shortTextFrame = CGRect(x: 0, y: 0, width: 200, height: 50)
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        prepareCell()
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        print("Selected")
     }
-    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         prepareCell()
@@ -36,6 +40,7 @@ class AnimalTableCell: UITableViewCell {
     }
     
     func setAnimal(_ animal: Animal) -> Void {
+        self.selectedAnimal = animal
         self.commonNameLabel.text = "Common Name: \(animal.commonName)"
         self.scientificNameLabel.text = "Scientific Name: \(animal.scientificName)"
         self.shortDescLabel.text = animal.shortDesc;
@@ -81,6 +86,10 @@ class AnimalTableCell: UITableViewCell {
         self.contentView.addSubview(self.nameStackView)
         self.contentView.addSubview(self.animalImage)
         self.contentView.addSubview(self.shortDescLabel)
+        
+        self.tap = UITapGestureRecognizer(target: self, action: #selector(AnimalCellTapped))
+        self.contentView.addGestureRecognizer(tap)
+
         prepareContraints()
         
     }
@@ -120,5 +129,10 @@ class AnimalTableCell: UITableViewCell {
                                                   constraint: "H:|-[short]-|")
 
 
+    }
+    
+    func AnimalCellTapped() -> Void {
+        delegate?.cellTapped(animalSelected: self.selectedAnimal!)
+        
     }
 }

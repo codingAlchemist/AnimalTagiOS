@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@objc(Animal)
 public class Animal: NSObject {
     var commonName = String()
     var scientificName = String()
